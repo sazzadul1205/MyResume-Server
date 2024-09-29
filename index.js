@@ -12,6 +12,9 @@ app.use(
       "http://localhost:5173",
       "https://myresume-367d0.web.app",
       "https://myresume-367d0.firebaseapp.com",
+      "https://sazzadul-islam-resume.web.app",
+      "https://sazzadul-islam-resume.firebaseapp.com",
+
     ],
     credentials: true,
   })
