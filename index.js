@@ -14,7 +14,6 @@ app.use(
       "https://myresume-367d0.firebaseapp.com",
       "https://sazzadul-islam-resume.web.app",
       "https://sazzadul-islam-resume.firebaseapp.com",
-
     ],
     credentials: true,
   })
@@ -36,7 +35,7 @@ const client = new MongoClient(uri, {
 async function run() {
   try {
     // Connect the client to the server	(optional starting in v4.7)
-    await client.connect();
+    // await client.connect();
 
     //  connection
     const BannerCollection = client.db("MyResume").collection("Banner");
