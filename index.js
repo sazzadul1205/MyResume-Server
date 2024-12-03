@@ -42,6 +42,7 @@ async function run() {
     const UserDataCollection = client.db("MyResume").collection("UserData");
     const MySelfCollection = client.db("MyResume").collection("MySelf");
     const MyProjectCollection = client.db("MyResume").collection("MyProject");
+    const ProjectsCollection = client.db("MyResume").collection("Projects");
     const ContactInfoCollection = client
       .db("MyResume")
       .collection("ContactInfo");
@@ -68,6 +69,12 @@ async function run() {
     // MyProject API
     app.get("/MyProject", async (req, res) => {
       const result = await MyProjectCollection.find().toArray();
+      res.send(result);
+    });
+
+    // Projects API
+    app.get("/Projects", async (req, res) => {
+      const result = await ProjectsCollection.find().toArray();
       res.send(result);
     });
 
